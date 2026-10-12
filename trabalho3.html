@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página reservada para o terceiro trabalho da disciplina.">
+    <title>Interação Web | Trabalho 3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .coming-soon { min-height: 65vh; display: grid; place-items: center; text-align: center; padding: 3rem 1rem; }
+        .coming-soon > div { max-width: 640px; }
+        .coming-soon h1 { margin: .7rem 0; font-size: clamp(2rem, 5vw, 3rem); }
+        .coming-soon p { color: var(--color-muted); line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <site-header active="other"><span slot="subtitle">Portfólio da disciplina</span></site-header>
+    <main class="container coming-soon">
+        <div>
+            <span class="eyebrow">TRABALHO 3</span>
+            <h1>Em breve</h1>
+            <p>Esta página está reservada para uma próxima atividade da disciplina. Enquanto isso, você pode conhecer o editor de menus ou realizar a prova on-line.</p>
+            <a class="button button-primary" href="prova.html">Ir para o Trabalho 2</a>
+        </div>
+    </main>
+    <site-footer></site-footer>
+    <script src="js/components.js"></script>
+</body>
+</html>

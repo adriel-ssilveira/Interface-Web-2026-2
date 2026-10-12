@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Editor visual de menus HTML."
+    >
+
+    <title>Interação Web | Editor de Menus</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editor.css">
+
+</head>
+
+
+<body>
+
+    <site-header active="editor"><span slot="subtitle">Portfólio da disciplina</span></site-header>
+
+
+    <main class="editor-page">
+
+        <div class="container">
+
+            <div class="editor-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        TRABALHO 1
+                    </span>
+
+                    <h1>
+                        Editor de Menus
+                    </h1>
+
+                    <p>
+                        Configure os itens e veja o resultado
+                        instantaneamente.
+                    </p>
+
+                </div>
+
+
+                <span class="status-badge">
+
+                    <span></span>
+
+                    Pré-visualização ao vivo
+
+                </span>
+
+            </div>
+
+
+            <div class="editor-layout">
+
+
+                <!-- PAINEL DE CONFIGURAÇÃO -->
+
+                <section
+                    class="control-panel"
+                    aria-labelledby="config-title"
+                >
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                CONFIGURAÇÃO
+                            </span>
+
+                            <h2 id="config-title">
+                                Editor
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="item-list"
+                        class="item-list"
+                    ></div>
+
+
+                    <button
+                        type="button"
+                        id="add-item"
+                        class="button button-primary full-width"
+                    >
+                        + Adicionar item
+                    </button>
+
+
+                    <!-- APARÊNCIA -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            Aparência do menu
+                        </h3>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label for="menu-bg">
+                                    Cor de fundo
+                                </label>
+
+                                <div class="color-control">
+
+                                    <input
+                                        type="color"
+                                        id="menu-bg"
+                                        value="#172033"
+                                    >
+
+                                    <span id="menu-bg-value">
+                                        #172033
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="menu-text">
+                                    Cor dos textos
+                                </label>
+
+                                <div class="color-control">
+
+                                    <input
+                                        type="color"
+                                        id="menu-text"
+                                        value="#ffffff"
+                                    >
+
+                                    <span id="menu-text-value">
+                                        #ffffff
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="item-bg">
+                                    Cor dos itens
+                                </label>
+
+                                <div class="color-control">
+
+                                    <input
+                                        type="color"
+                                        id="item-bg"
+                                        value="#172033"
+                                    >
+
+                                    <span id="item-bg-value">
+                                        #172033
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="item-hover">
+                                    Cor ao passar o mouse
+                                </label>
+
+                                <div class="color-control">
+
+                                    <input
+                                        type="color"
+                                        id="item-hover"
+                                        value="#2563eb"
+                                    >
+
+                                    <span id="item-hover-value">
+                                        #2563eb
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="font-size">Tamanho do texto</label>
+
+                                <output id="font-size-output" for="font-size">16px</output>
+
+                                <input
+                                    type="range"
+                                    id="font-size"
+                                    min="12"
+                                    max="30"
+                                    value="16"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="item-padding">Espaçamento interno</label>
+
+                                <output id="item-padding-output" for="item-padding">12px</output>
+
+                                <input
+                                    type="range"
+                                    id="item-padding"
+                                    min="6"
+                                    max="30"
+                                    value="12"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="item-gap">Espaçamento entre itens</label>
+
+                                <output id="item-gap-output" for="item-gap">4px</output>
+
+                                <input
+                                    type="range"
+                                    id="item-gap"
+                                    min="0"
+                                    max="30"
+                                    value="4"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="border-radius">Arredondamento</label>
+
+                                <output id="border-radius-output" for="border-radius">8px</output>
+
+                                <input
+                                    type="range"
+                                    id="border-radius"
+                                    min="0"
+                                    max="30"
+                                    value="8"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="border-width">Espessura da borda</label>
+
+                                <output id="border-width-output" for="border-width">0px</output>
+
+                                <input
+                                    type="range"
+                                    id="border-width"
+                                    min="0"
+                                    max="5"
+                                    value="0"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="border-color">
+                                    Cor da borda
+                                </label>
+
+                                <div class="color-control">
+
+                                    <input
+                                        type="color"
+                                        id="border-color"
+                                        value="#64748b"
+                                    >
+
+                                    <span id="border-color-value">
+                                        #64748b
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field field-wide">
+
+                                <label for="direction">
+                                    Distribuição dos itens
+                                </label>
+
+                                <select id="direction">
+
+                                    <option value="row">
+                                        Horizontal
+                                    </option>
+
+                                    <option value="column">
+                                        Vertical
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IMAGEM -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            Imagem
+                        </h3>
+
+
+                        <div class="field">
+
+                            <label for="image-url">
+                                URL da imagem
+                            </label>
+
+                            <input
+                                type="url"
+                                id="image-url"
+                                placeholder="https://exemplo.com/imagem.jpg"
+                            >
+
+                            <small class="field-help">
+                                Opcional. Cole uma URL de imagem válida.
+                            </small>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="image-position">
+                                Posição da imagem
+                            </label>
+
+                            <select id="image-position">
+
+                                <option value="top">
+                                    Acima do menu
+                                </option>
+
+                                <option value="side">
+                                    Ao lado do menu
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PRÉ-VISUALIZAÇÃO -->
+
+                <section
+                    class="preview-panel"
+                    aria-labelledby="preview-title"
+                >
+
+                    <div class="panel-heading preview-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                RESULTADO
+                            </span>
+
+                            <h2 id="preview-title">
+                                Menu gerado
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="reset-editor"
+                            class="button button-secondary"
+                        >
+                            Restaurar padrão
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="preview-area"
+                        class="preview-area"
+                    >
+
+                        <div
+                            id="preview-image-wrap"
+                            class="preview-image-wrap hidden"
+                        >
+
+                            <img
+                                id="preview-image"
+                                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                alt="Imagem adicionada ao menu"
+                            >
+
+                        </div>
+
+
+                        <nav
+                            id="generated-menu"
+                            class="generated-menu"
+                            aria-label="Pré-visualização do menu"
+                        ></nav>
+
+                    </div>
+
+
+                    <div class="preview-note">
+
+                        <strong>
+                            Prévia em tempo real
+                        </strong>
+
+                        <span>
+                            As alterações feitas no painel são
+                            aplicadas automaticamente.
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <site-footer></site-footer>
+
+
+    <script src="js/components.js"></script>
+    <script src="js/editor.js"></script>
+
+</body>
+</html>

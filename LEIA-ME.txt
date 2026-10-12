@@ -1,0 +1,14 @@
+TRABALHO 2 - INTERAÇÃO WEB
+
+Arquivos principais:
+- index.html: apresentação do portfólio
+- editor.html: Trabalho 1 (editor de menus)
+- prova.html: Trabalho 2 (prova on-line)
+- trabalho3.html: página provisória do Trabalho 3
+- js/components.js: componentes reutilizáveis site-header e site-footer
+- js/quiz.js: Web Component <my-test>, com Shadow DOM e objeto literal de questões
+- js/editor.js: lógica original do editor de menus
+
+Para testar localmente, abra a pasta no VS Code e use uma extensão de servidor local (por exemplo, Live Server). Também é possível publicar os arquivos em um repositório GitHub com GitHub Pages.
+
+A prova contém cinco questões. Para adicionar outra, acrescente um objeto ao array TEST_DATA.questions em js/quiz.js, mantendo text, alternatives (três opções) e correct (índice da resposta certa, começando em zero).
